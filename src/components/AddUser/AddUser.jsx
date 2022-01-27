@@ -16,7 +16,7 @@ const AddUser = () => {
     const history = useHistory()
     // const options = useMemo(() => countryList().getData(), [])
   return (
-    <div>
+    <div className='cont-wrapper'>
         <div className='add_form_user '>
             <div className='form_wrapper'>
            <h4>Welcome to Oluleye Crud App</h4> 
@@ -57,7 +57,7 @@ const AddUser = () => {
 
     })} 
     onSubmit= {async values => {
-        alert(JSON.stringify(values))
+        // alert(JSON.stringify(values))
         // setLoading(true)
         await dispatch(createUser(values));
         history.push('/')
@@ -144,16 +144,6 @@ const AddUser = () => {
         
 
         <button type='submit' className='create_btn' >  
-            {/* {
-                loading ?
-                <Loader
-                type="Rings"
-                color="white"
-                height={50}
-                width={50}
-                //    timeout={3000} //3 secs
-                /> :null
-            } */}
         Create User
         </button>
         </Form>

@@ -5,6 +5,7 @@ import { useSelector } from 'react-redux';
 import Papa from "papaparse";
 import { Link } from 'react-router-dom';
 import { deleteUser } from '../../store/action/userAction';
+import moment from 'moment';
 
 const LandingPage = () => {
   const dispatch = useDispatch()
@@ -14,6 +15,7 @@ const LandingPage = () => {
     alert("Are sure you want to delete"+ " " +delItem)
     dispatch(deleteUser(delItem))
   }
+  let time = new Date()
   let sampleData = [{
     name: "Oluleye OLufiade",
     email: "oluleyeolufiade@gmail.com",
@@ -51,7 +53,7 @@ const LandingPage = () => {
                 <div className='card' key={id}>
                   <div className={each.status === "Available"?"status":"status_not"}>{each.status}</div>
                   <h4 className='card_title'>{each.title}</h4>
-                  <div className='card_date'>Mon 21 2022</div>
+                  <div className='card_date'>{moment(each.created_at).format('LLL')}  </div>
                   <div className='card_dsc'>{each.description}</div>
                   <div className='name_wrapper'>
                     <div className='name_label'>Full Name</div>

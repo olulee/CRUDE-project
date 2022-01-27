@@ -27,7 +27,7 @@ const EditUser = () => {
         };
     }, [])
   return (
-    <div>
+    <div className='cont-wrapper'>
         {
             value === null ? "Loading.......":
         <div className='add_form_user '>

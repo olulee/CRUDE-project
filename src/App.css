@@ -35,7 +35,10 @@
   padding: 1.2rem;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+.cont-wrapper{
+  margin-top: 1.2rem ;
 
+}
 .form_wrapper{
   width: 80%;
   margin: auto;
@@ -74,13 +77,13 @@
 .create_btn{
   margin-top: 0.8rem;
   padding: 0.4rem;
-  background-color: #020079;
+  background-color: #5FD270;
   color: #FFFFFF;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
-  border: 1px solid #020079;
+  border: 1px solid #5FD270;
   box-sizing: border-box;
 }
 .nav_crt_btn{
