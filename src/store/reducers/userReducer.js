@@ -5,12 +5,10 @@ const initialState = {
 
 export const userReducer = (state = initialState, action) => {
   if (action.type === 'ADD_USER') {
-    console.log(action);
     return Object.assign({}, state, {
       user: [...state.user, action.payload],
     });
   } else if (action.type === 'EDIT_USER') {
-    console.log(action);
     return Object.assign({}, state, {
       user: state.user.map((each) => {
         if (each.email === action.payload.email) {
@@ -20,7 +18,6 @@ export const userReducer = (state = initialState, action) => {
       }),
     });
   } else if (action.type === 'DELETE_USER') {
-    console.log(action);
     const newArray = state.user.filter(
       (each, i) => each.name !== action.payload
     );
@@ -32,11 +29,9 @@ export const userReducer = (state = initialState, action) => {
       user: state.user.concat(action.payload),
     });
   } else if (action.type === 'SEARCH_USER') {
-    console.log(action);
     const newArray = state.user.filter(
       (each, i) => each.name == action.payload
     );
-    console.log(newArray);
     return Object.assign({}, state, {
       searchResult: newArray,
     });

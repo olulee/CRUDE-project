@@ -9,7 +9,6 @@ import moment from 'moment';
 const LandingPage = () => {
   const dispatch = useDispatch();
   const users = useSelector((state) => state.userReducer.user);
-  console.log(users);
   const handleDelete = (delItem) => {
     alert('Are sure you want to delete', ' ' + delItem);
     dispatch(deleteUser(delItem));

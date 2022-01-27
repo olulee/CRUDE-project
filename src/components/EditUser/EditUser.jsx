@@ -11,7 +11,6 @@ const EditUser = () => {
   const [value, setValue] = useState(null);
   const params = useParams();
   const users = useSelector((state) => state.userReducer.user);
-  console.log(users);
   const dispatch = useDispatch();
   const history = useHistory();
   useEffect(() => {

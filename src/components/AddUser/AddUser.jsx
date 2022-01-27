@@ -8,7 +8,6 @@ import { useHistory } from 'react-router-dom';
 
 const AddUser = () => {
   const users = useSelector((state) => state);
-  console.log(users);
   const dispatch = useDispatch();
   const history = useHistory();
   return (

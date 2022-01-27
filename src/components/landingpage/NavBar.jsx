@@ -9,12 +9,9 @@ const Navbar = () => {
   const users = useSelector((state) => state);
   const dispatch = useDispatch();
   const [value, setValue] = useState('');
-  console.log(users);
   const handleChangeUploadCsv = (e) => {
     const files = e.target.files;
-    console.log(files);
     if (files) {
-      console.log(files[0]);
       Papa.parse(files[0], {
         header: true,
         complete: function (results) {
