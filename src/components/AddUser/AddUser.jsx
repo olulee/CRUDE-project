@@ -1,7 +1,6 @@
-import React, { useMemo, useState } from 'react';
-import { useFormik, Formik, Form, Field, ErrorMessage } from 'formik';
+import React from 'react';
+import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as yup from 'yup';
-import Loader from 'react-loader-spinner';
 import FormInput from '../inputs/FormInput';
 import { useDispatch, useSelector } from 'react-redux';
 import { createUser } from '../../store/action/userAction';

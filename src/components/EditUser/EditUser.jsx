@@ -1,11 +1,9 @@
-import React, { useEffect, useMemo, useState } from 'react';
-import { useFormik, Formik, Form, Field, ErrorMessage } from 'formik';
+import React, { useEffect, useState } from 'react';
+import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as yup from 'yup';
-import Loader from 'react-loader-spinner';
 import FormInput from '../inputs/FormInput';
-// import countryList from 'react-select-country-list';
 import { useDispatch, useSelector } from 'react-redux';
-import { createUser, editUser } from '../../store/action/userAction';
+import { editUser } from '../../store/action/userAction';
 import { useHistory } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 
@@ -28,7 +26,6 @@ const EditUser = () => {
       ) : (
         <div className='add_form_user '>
           <div className='form_wrapper'>
-            {/* <h4>Hello Oluleye</h4>  */}
             <h4>Edit {params.name} Detail</h4>
             <Formik
               enableReinitialize
@@ -61,11 +58,8 @@ const EditUser = () => {
                 address: yup.string().required('please enter address'),
               })}
               onSubmit={async (values) => {
-                alert(JSON.stringify(values));
-                // setLoading(true)
                 await dispatch(editUser(values));
                 history.push('/');
-                // setLoading(false)
               }}
             >
               {(props) => (

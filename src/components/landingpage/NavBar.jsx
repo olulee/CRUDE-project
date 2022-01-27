@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import Papa from 'papaparse';
 import { useDispatch } from 'react-redux';
-import { bulkUpload, searchUser } from '../../store/action/userAction';
+import { bulkUpload } from '../../store/action/userAction';
 
 const Navbar = () => {
   const users = useSelector((state) => state);
@@ -28,15 +28,10 @@ const Navbar = () => {
     setValue(e.target.value);
   };
 
-  const handleSubmit = (e) => {
-    // e.preventDefault()
-    // dispatch(searchUser(value))
-  };
-
   return (
     <div className='landing_wrapper'>
       <div className='top_wrapper'>
-        <form onSubmit={handleSubmit}>
+        <form>
           <input
             className='srch'
             onChange={handleChange}

@@ -1,8 +1,7 @@
 import React from 'react';
-import { CSVDownload, CSVLink } from 'react-csv';
+import { CSVLink } from 'react-csv';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
-import Papa from 'papaparse';
 import { Link } from 'react-router-dom';
 import { deleteUser } from '../../store/action/userAction';
 import moment from 'moment';
@@ -12,10 +11,10 @@ const LandingPage = () => {
   const users = useSelector((state) => state.userReducer.user);
   console.log(users);
   const handleDelete = (delItem) => {
-    alert('Are sure you want to delete' + ' ' + delItem);
+    alert('Are sure you want to delete', ' ' + delItem);
     dispatch(deleteUser(delItem));
   };
-  let time = new Date();
+
   let sampleData = [
     {
       name: 'Oluleye OLufiade',
